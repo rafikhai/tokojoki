@@ -523,3 +523,20 @@ document.addEventListener("DOMContentLoaded", function () {
   
 observer.observe(logoImg);
 });
+
+//animasi why choose us
+document.addEventListener("DOMContentLoaded", function () {
+  const logoImg = document.querySelector(".whychooseus");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        logoImg.classList.add("animate__animated", "animate__zoomIn");
+      } else {
+        logoImg.classList.remove("animate__animated", "animate__zoomIn");
+      }
+    });
+  });
+  
+observer.observe(logoImg);
+});
